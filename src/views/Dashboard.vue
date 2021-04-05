@@ -567,8 +567,8 @@ export default {
       const body = {
         type: "stripeOnboard",
         accountId: this.profile.Attributes.stripeAccountId,
-        refreshURL: "http://localhost:8080/refresh-onboard",
-        returnURL: "http://localhost:8080/dashboard",
+        refreshURL: "https://competent-ramanujan-8ccacb.netlify.app/refresh-onboard",
+        returnURL: "https://competent-ramanujan-8ccacb.netlify.app/dashboard",
       };
 
       this.axios
@@ -632,7 +632,7 @@ export default {
   },
   mounted() {
     console.log("test", this.$router);
-    this.twowayLink = `http://localhost:8080/${this.profile.Attributes.paymentLink}`;
+    this.twowayLink = `https://competent-ramanujan-8ccacb.netlify.app/${this.profile.Attributes.paymentLink}`;
 
     if (this.profile.Attributes.stripeAccountId) {
       this.getAccount();

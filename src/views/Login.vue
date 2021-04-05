@@ -79,7 +79,7 @@ export default {
       const body = {
         type: "login",
         email: this.email,
-        url: "http://localhost:8080/validation",
+        url: "https://competent-ramanujan-8ccacb.netlify.app/validation",
       };
 
       this.axios

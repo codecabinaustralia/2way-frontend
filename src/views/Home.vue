@@ -246,8 +246,8 @@ export default {
         type: "onboarding",
         email: this.email,
         cost: this.cost
-        // refreshURL: "http://localhost:8080/refresh-onboard",
-        // returnURL: "http://localhost:8080/dashboard",
+        // refreshURL: "https://competent-ramanujan-8ccacb.netlify.app/refresh-onboard",
+        // returnURL: "https://competent-ramanujan-8ccacb.netlify.app/dashboard",
       };
 
       this.axios
