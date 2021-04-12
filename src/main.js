@@ -7,6 +7,7 @@ import VueAxios from "vue-axios";
 import "./assets/tailwind.css";
 import VueClipboard from 'vue-clipboard2'
 
+Vue.use(require('vue-chartist'))
 Vue.use(VueClipboard)
 Vue.use(VueAxios, axios);
 Vue.config.productionTip = false;

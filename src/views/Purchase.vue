@@ -63,8 +63,8 @@ export default {
       sessionObj: null,
       publishableKey:
         "pk_test_51IaY8vKEyaGjGRCoH2X5ksowWJtwBEU7M5DgoQQ62MBZLf8ONonqOpcqLaMemyauca46rv4c2hWZKi4UIerx9L8y001v3Jv1Mi",
-      successURL: "https://competent-ramanujan-8ccacb.netlify.app/receipt",
-      cancelURL: "https://competent-ramanujan-8ccacb.netlify.app/purchase",
+      successURL: "http://localhost:8080/receipt",
+      cancelURL: "http://localhost:8080/purchase",
     };
   },
   methods: {

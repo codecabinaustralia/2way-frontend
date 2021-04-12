@@ -85,50 +85,49 @@
     <!-- End email modal  -->
     <main>
       <div
-        class="min-h-screen pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden"
-      >
+        class="min-h-screen bg-gray-900 lg:pb-14 lg:overflow-hidden"
+      > 
+
+      <div class="flex container mx-auto px-4">
+        <div class="flex-shrink">
+        <logo />
+        </div>
+        <div class="flex-shrink ml-auto flex text-white text-white space-x-10 pt-8">
+            <div class="flex-shrink cursor-pointer hover:text-primaryGreen">How it works</div>
+            <div class="flex-shrink cursor-pointer hover:text-primaryGreen">Privacy</div>
+             <div class="flex-shrink -mt-4"><div class="cursor-pointer hover:bg-purple-600 bg-gray-800 text-white p-4 rounded">Login</div></div>
+        </div>
+      </div>
+
+       
+       
         <div class="mx-auto max-w-7xl lg:px-8">
-          <div class="lg:grid lg:grid-cols-2 lg:gap-8">
+          <div class="grid grid-cols-1 gap-8">
             <div
               class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center"
             >
-              <div class="mt-1">
-                <logo />
+              <div class="mt-4 text-center">
                 <h1
-                  class="leading-none mt-4 header text-3xl tracking-tight text-white sm:mt-5 sm:text-4xl lg:mt-6 xl:text-4xl"
+                  class="leading-none mt-4 header text-3xl tracking-tight text-white sm:mt-5 text-6xl "
                 >
-                  <span class="block">The marketplace that helps you</span>
-                  <span class="block text-primaryGreen text-6xl"
-                    >buy &amp; sell replies</span
+                  <span>Onlyfans </span>
+                  <span class="text-primaryGreen"
+                    >for email</span
                   >
                 </h1>
-                <h2 class="text-white headerMedium mt-6">
-                  Register for your free 2way link & attach it to your social
-                  bios.
+                <h2 class="text-white headerMedium mt-10 text-xl">
+                  Get your free email.fan link and start earning
                 </h2>
-                <h2 class="text-white headerMedium">
-                  Those wanting your time can now pay you for it.
+                <h2 class="text-primaryGreen headerMedium text-base">
+                  Keep your email anonymous, earn big &amp; communicate with fans via email
                 </h2>
                 <p
                   class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
                 ></p>
                 <div class="mt-10 sm:mt-12">
                   <div class="grid grid-cols-12 gap-2">
-                    <div class="col-span-12">
-                      <div class="header mb-2 text-white text-base">
-                        What's your number?
-                      </div>
-                    </div>
-                    <!-- <div class="cols-span-12 sm:col-span-4">
-                              <input
-                                id="email"
-                                type="email"
-                                v-model="email"
-                                placeholder="Enter your email"
-                                class="block w-full h-20 text-lg px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
-                              />
-                            </div> -->
-                    <div class="cols-span-12 sm:col-span-5">
+
+                    <div class="cols-span-12 sm:col-span-5 sm:col-start-2">
                       <div class="bg-white rounded-lg h-20 grid grid-cols-12">
                         <div
                           class="col-span-2 text-4xl header text-gray-700 text-center pt-3"
@@ -148,26 +147,27 @@
                           class="col-span-4 px-4 rounded-r-md pt-6 header leading-none bg-gray-100"
                         >
                           <span class="block text-sm text-gray-600 headerMedium"
-                            >each</span
-                          >reply
+                            >earned per reply</span
+                          >
                         </div>
                       </div>
                     </div>
+                    
                     <div
-                      class="text-white header text-sm text-center textcols-span-12 sm:col-span-5"
+                      class="text-white header text-sm text-center cols-span-12  sm:col-span-5"
                     >
                       <div
                         @click="showEmail = true"
                         class="cursor-pointer text-xl block header h-20 items-center flex w-full py-3 px-4 rounded-md shadow bg-indigo-500 text-white font-medium hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
                       >
                         <div class="w-full text-center">
-                          Your 2way link awaits
+                          Free fan link
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="flex mt-10">
+                  <div class="flex justify-center mt-10">
                     <div class="flex-shrink">
                       <star class="inline-block w-6 h-6 mr-1" />
                       <star class="inline-block w-6 h-6 mr-1" />
@@ -189,24 +189,13 @@
                 </div>
               </div>
             </div>
-            <div class="col-span-1 flex items-center">
-              <div class="text-center w-3/4 mx-auto">
-                <h3 class="header text-3xl tracking-tight text-gray-500">
-                  It's feels like magic.
-                  <span class="text-white">I made $500 this morning</span> by
-                  replying to my sales calls &amp; recruitment emails.
-                </h3>
-              </div>
-            </div>
+            
           </div>
 
           <div
             class="text-center leading-none mt-10 flex w-full md:w-1/2 mx-auto text-gray-600 text-sm"
           >
-            2way tokens are valued at $5USD you can cashout your tokens once you
-            collect 50 or more. We also rely on stripe to handle our payouts and
-            charges. Upon signing up you'll be taken through the stripe process
-            so we can start depositing money into your account.
+            email.fans is not affiliated with onlyfans or any other third party. We are independently owned and operated. We exist to provide users with a way to make a side hustle by charging for thier time whilst replying to emails.
           </div>
         </div>
       </div>
@@ -246,8 +235,8 @@ export default {
         type: "onboarding",
         email: this.email,
         cost: this.cost
-        // refreshURL: "https://competent-ramanujan-8ccacb.netlify.app/refresh-onboard",
-        // returnURL: "https://competent-ramanujan-8ccacb.netlify.app/dashboard",
+        // refreshURL: "http://localhost:8080/refresh-onboard",
+        // returnURL: "http://localhost:8080/dashboard",
       };
 
       this.axios
@@ -285,9 +274,10 @@ export default {
 
 <style >
 .header {
-  font-family: "GilroyBold", Helvetica, Arial !important;
+  font-family: "Baloo", Helvetica, Arial !important;
 }
-.headerMedium {
+
+body, html{
   font-family: "GilroyMedium", Helvetica, Arial !important;
 }
 </style>

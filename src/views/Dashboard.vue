@@ -234,9 +234,9 @@
                     Welcome to your 2way account
                   </h1>
 
-                  <div v-if="account">
+                  <div>
                     <div
-                      v-if="account.charges_enabled"
+                      v-if="(profile.account || {}).charges_enabled"
                       class="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-primaryGreen bg-opacity-25 rounded-md"
                     >
                       <div
@@ -257,6 +257,10 @@
                         Your 2way account is verified
                       </div>
                     </div>
+                  </div>
+
+                  <div>
+                    <graph />
                   </div>
 
                   <div v-if="!profile">
@@ -306,10 +310,11 @@
                     </router-link>
                   </div>
 
-                  <div v-if="account">
+
+                  <div v-if="profile.account">
                     <div
                       @click="onboardStripe()"
-                      v-if="!account.charges_enabled"
+                      v-if="!profile.account.charges_enabled"
                       class="cursor-pointer hover:bg-purple-700 rounded-md bg-indigo-700 p-4 mb-10"
                     >
                       <div class="flex">
@@ -430,10 +435,11 @@
                             </div>
                           </div>
                         </li>
-
-                        <a :href="account.loginLink.url" target="_blank">
+                        
+                        <div v-if="(profile.account || {}).loginLink">
+                        <a :href="profile.account.loginLink.url" target="_blank">
                           <li
-                            v-if="account.loginLink"
+                            v-if="profile.account.loginLink"
                             class="mt-2 col-span-1 flex shadow-sm rounded-md"
                           >
                             <div
@@ -485,6 +491,7 @@
                               </div>
                             </div></li
                         ></a>
+                        </div>
                       </ul>
                     </div>
                   </div>
@@ -502,6 +509,7 @@
 
 <script>
 import { store } from "../store/index";
+import Graph from "../components/graph";
 import LogoSmile from "../components/logoSmile";
 export default {
   data() {
@@ -522,6 +530,7 @@ export default {
   },
   components: {
     LogoSmile,
+    Graph
   },
   methods: {
     getAccount() {
@@ -547,7 +556,9 @@ export default {
           console.log("Response Account", response.data);
           this.loading = false;
           const body = JSON.parse(response.data.body);
-          this.account = body;
+          const _profile = store.state.profile
+          _profile.account = body
+          store.commit("profile", _profile)
         })
         .catch((error) => {
           console.log(error);
@@ -567,8 +578,8 @@ export default {
       const body = {
         type: "stripeOnboard",
         accountId: this.profile.Attributes.stripeAccountId,
-        refreshURL: "https://competent-ramanujan-8ccacb.netlify.app/refresh-onboard",
-        returnURL: "https://competent-ramanujan-8ccacb.netlify.app/dashboard",
+        refreshURL: "http://localhost:8080/refresh-onboard",
+        returnURL: "http://localhost:8080/dashboard",
       };
 
       this.axios
@@ -632,7 +643,7 @@ export default {
   },
   mounted() {
     console.log("test", this.$router);
-    this.twowayLink = `https://competent-ramanujan-8ccacb.netlify.app/${this.profile.Attributes.paymentLink}`;
+    this.twowayLink = `http://localhost:8080/${this.profile.Attributes.paymentLink}`;
 
     if (this.profile.Attributes.stripeAccountId) {
       this.getAccount();
